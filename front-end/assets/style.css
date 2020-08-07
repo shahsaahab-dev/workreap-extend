@@ -1,0 +1,193 @@
+/*
+* Front End Styles
+*/
+
+
+label[for="work_hours"] {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+button#save_work_hours {
+    margin-top: 20px;
+    border-radius: 0;
+    padding: 10px 30px;
+    background: #f72a85;
+    border: none;
+}
+
+.wt-workhours h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+table.availibility {
+    font-size: 14px;
+    font-weight: 300!important;
+}
+
+table.availibility,td,tr,th {
+    font-weight: 300;
+}
+
+table.availibility {
+    font-size: 12px;
+}
+
+
+.availibility input {height: unset!important;width: 100%!important;padding: 0!important;height: 100%!important;border-radius: 0!important;border: none!important;}
+
+tbody th {
+    width: 64px;
+}
+
+.selector {
+    background: #22222252;
+    position: absolute;
+    margin: 0 auto;
+    right: 15%;
+    padding: 25px;
+    margin-top: 20%;
+    display:none;
+}
+
+.selector button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #f72a85;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+table.availibility {
+    display: inline-block;
+    width: 92%;
+    margin-left: 54px;
+}
+
+.wt-workhours ul {
+    display: inline-table;
+    width: 5%;
+    position: absolute;
+    list-style: none!important;
+    margin-left: 0px;
+    top: 15%;
+}
+
+.wt-workhours ul li {
+    list-style: none;
+}
+
+.wt-workhours ul li {
+    line-height: 31px;
+}
+
+.time-selector-box {
+    background: #404040b8;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(10em,15em);
+    display:none;
+}
+
+.time-selector-box button {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 25px;
+    margin-top: 15px;
+    background: #f72a85;
+    color: #fff;
+}
+
+.time-selector-box input {
+    border-radius: 0!important;
+    height: 40px!important;
+}
+
+td.greenBg{
+    background:green;
+    color:#fff!important;
+}
+
+tr[data-row-num="24"] {
+    display: none;
+}
+
+th {
+    padding: 10px 25px!important;
+    text-align: center!Important;
+    margin: 0 auto!important;
+    justify-content: center;
+    align-items: center;
+}
+
+button.save-hours {
+    background: #f72a85;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+div#wt-hours {
+    text-align: center;
+}
+
+
+div#wt-hours p {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 30px;
+}
+
+input#kavi {
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: inline-flex;
+}
+
+input#defaultCheck1 {
+    margin-top: 38px;
+}
+
+.form-check {
+    text-align: left;
+}
+
+
+button.set_timings {
+    padding: 10px 30px;
+    background: #f72a85;
+    color: #fff;
+}
+
+.search-widget {
+    position: absolute;
+    background: #fff;
+    box-shadow: 5px 5px 10px;
+    z-index: 1;
+    display:none;
+    left: 96%;
+    margin-top: -55px;
+}
+
+.search-widget th {
+    padding: 0px 5px!important;
+    font-size: 14px;
+    background: #f1f1f1;
+    line-height: 20px;
+}
+
+td {
+    line-height: 20px!important;
+    font-size:12px;
+    padding:2px 5px!important;
+}
+
+.search-widget table {
+    margin: 0px;
+}

@@ -19,13 +19,14 @@ class Plugin_Setup {
 	public function woo_extend_style_scripts() {
 
 		// Time Picker
-		wp_enqueue_style( 'timepicker-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.css', array(), '1.0', 'all' );
-		wp_enqueue_script( 'timepicker-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.js', array( 'jquery' ), '1.0', true );
+
 		wp_enqueue_style( 'custom-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/style.css', array(), '1.0', 'all' );
 		wp_enqueue_style( 'jquery-ui-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/jquery-ui.min.css', array(), '1.0', 'all' );
 		wp_enqueue_script( 'jquery-ui-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/jquery-ui.min.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'custom-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/main.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'ajax-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/ajax_update_form.js', array( 'jquery' ), '1.0', true );
+		wp_enqueue_style( 'timepicker-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.css', array(), '1.0', 'all' );
+		wp_enqueue_script( 'timepicker-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.js', array( 'jquery' ), '1.0', true );
 		wp_localize_script(
 			'ajax-js',
 			'ajax_controller',
@@ -34,14 +35,21 @@ class Plugin_Setup {
 			)
 		);
 
+		// if ( is_page( 'search-freelancers' ) ) {
+		// wp_dequeue_script( 'custom-js' );
+		// }
+
+		wp_enqueue_script( 'front-end-filtering', plugin_dir_url( __FILE__ ) . '/front-end/assets/front-end-filtering.js', array( 'jquery' ), '1.0', true );
 	}
 
 	public function admin_style_scripts() {
 		wp_enqueue_style( 'work-reap-admin-css', plugin_dir_url( __FILE__ ) . '/back-end/assets/style.css', array(), '1.0', 'all' );
 		wp_enqueue_script( 'admin-custom-js', plugin_dir_url( __FILE__ ) . '/back-end/assets/main.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_style( 'timepicker-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.css', array(), '1.0', 'all' );
-
+		wp_enqueue_style( 'bs-admin', plugin_dir_url( __FILE__ ) . '/back-end/assets/bs-admin.css', array(), '1.0', 'all' );
 		wp_enqueue_script( 'timepicker-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/timepicker.js', array( 'jquery' ), '1.0', true );
+		wp_enqueue_style( 'jquery-ui-css', plugin_dir_url( __FILE__ ) . '/front-end/assets/jquery-ui.min.css', array(), '1.0', 'all' );
+		wp_enqueue_script( 'jquery-ui-js', plugin_dir_url( __FILE__ ) . '/front-end/assets/jquery-ui.min.js', array( 'jquery' ), '1.0', true );
 	}
 
 
