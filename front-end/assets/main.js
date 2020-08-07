@@ -8,23 +8,47 @@ jQuery(document).ready(function ($) {
         if(ft < 10){
             var string_build = `${row_prev}:00-${row_next}:00`;
             var tLength = $(this).text();
-            $(this).addClass("greenBg");
-            var tLenB = tLength.replace(/ /g, "");
+            if($(this).hasClass("greenBg")){
+                $(this).removeClass("greenBg");
+                $(this).text("");
+                var day = $(this).data("day");
+                $("table").find(`input[name=${day}]`).val(function(i,currVal){
+                    var val = currVal;
+                    var a2 = val.replace(`{${string_build}},`,"");
+                    return a2;
+                })
+            }else{
+                 $(this).addClass("greenBg");
+                 var tLenB = tLength.replace(/ /g, "");
             $(this).text(string_build);
             var day = $(this).data("day");
             $("table").find(`input[name="${day}"]`).val(function(i,currVal){
                 return currVal + `{${string_build}},`;
             });
+            }
+            
         }else{
             var string_build = `${row_prev}:00-${row_next}:00`;
             var tLength = $(this).text();
-            $(this).addClass("greenBg");
-            var tLenB = tLength.replace(/ /g, "");
+            if($(this).hasClass("greenBg")){
+                $(this).removeClass("greenBg");
+                $(this).text("");
+                var day = $(this).data("day");
+                $("table").find(`input[name=${day}]`).val(function(i,currVal){
+                    var val = currVal;
+                    var a2 = val.replace(`{${string_build}},`,"");
+                    return a2;
+                })
+            }else{
+                 $(this).addClass("greenBg");
+                 var tLenB = tLength.replace(/ /g, "");
             $(this).text(string_build);
             var day = $(this).data("day");
             $("table").find(`input[name="${day}"]`).val(function(i,currVal){
                 return currVal + `{${string_build}},`;
             });
+            }
+           
         }
        
         
